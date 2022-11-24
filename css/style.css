@@ -1,0 +1,173 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(130,186,251);
+    background: radial-gradient(circle, rgba(130,186,251,1) 0%, rgba(40,40,40,1) 36%);
+    color: #FFF;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    animation: fade-in 0.7s forwards;
+}
+
+body > header{
+    border-bottom: 1px solid #303030;
+    background-color: #282828;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+body > header > h1{
+    margin-left: 20px;
+    font-weight: bolder;
+    font-size: 22pt;
+}
+
+body > main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body > main > .Content{
+    width: 66%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: #303030;
+    padding: 3em;
+    border-radius: 1em;
+    animation: fade-in 0.5s 0.2s forwards;
+    opacity: 0;
+}
+
+body > main > .Content > .PortfolioText{
+    width: 50%;
+    border-left: 2px solid #FFF;
+    padding: 1em;
+}
+
+body > main > .Content > .PortfolioText > ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+body > main > .Content > .PortfolioText > h2 {
+    margin: 0;
+}
+
+body > main > .Content > .PortfolioText > ul > li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+body > main > .Content > .PortfolioText > ul > li > svg{
+    width: 28px;
+    height: 28px;
+}
+
+body > main > .Content > .PortfolioText > ul > li > p{
+    margin: 0;
+}
+
+body > main > .Content > .PortfolioImage{
+    width: 512px;
+    height: 512px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+    border: solid;
+}
+
+@media only screen and (max-width: 800px) {
+    body > main > .Content > .PortfolioImage{
+        width: 256px;
+        height: 256px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body > header{
+        margin: 0;
+    }
+
+    body > footer{
+        margin: 0;
+    }
+
+    body > main > .Content > .PortfolioImage{
+        height: 256px;
+    }
+
+    body > main > .Content{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 1825px) {
+    body > main > .Content > .PortfolioText{
+        width: 100%;
+        border-left: none;
+        font-size: 13pt;
+        padding: 0;
+    }
+}
+
+body > main > .Content > .PortfolioText > .ThankYou{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body > main > .Content > .PortfolioText > .ThankYou > object{
+    margin-left: 5px;
+}
+
+body > footer{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #303030;
+    margin-top: 5%;
+    background-color: #282828;
+}
+
+body > footer > .Copyright{
+    margin-left: 20px;
+}
+
+body > footer > .SocialIcons{
+    margin-right: 20px;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
