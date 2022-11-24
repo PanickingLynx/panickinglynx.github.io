@@ -3,8 +3,8 @@
 }
 
 html {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 body{
@@ -33,7 +33,6 @@ body > header{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 5%;
     grid-area: header;
 }
 
@@ -122,14 +121,6 @@ body > main > .Content > .PortfolioImage{
 }
 
 @media only screen and (max-width: 400px) {
-    body > header{
-        margin: 0;
-    }
-
-    body > footer{
-        margin: 0;
-    }
-
     body > main > .Content > .PortfolioImage{
         height: 256px;
     }
@@ -164,7 +155,6 @@ body > footer{
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #303030;
-    margin-top: 5%;
     background-color: #282828;
     grid-area: footer;
 }
