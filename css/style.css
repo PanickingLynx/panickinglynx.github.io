@@ -1,8 +1,19 @@
+*{
+    background-repeat: no-repeat;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 1fr 5%;
+    grid-template-areas: "header"
+                         "content"
+                         "footer";
     margin: 0;
     width: 100%;
     height: 100%;
@@ -17,12 +28,13 @@ body > header{
     border-bottom: 1px solid #303030;
     background-color: #282828;
     width: 100%;
-    height: 5%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 5%;
+    grid-area: header;
 }
 
 body > header > h1{
@@ -38,6 +50,7 @@ body > main{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    grid-area: content;
 }
 
 body > main > .Content{
@@ -98,6 +111,10 @@ body > main > .Content > .PortfolioImage{
 }
 
 @media only screen and (max-width: 800px) {
+    body > main > .Content > .PortfolioText{
+        width: 100%;
+    }
+    
     body > main > .Content > .PortfolioImage{
         width: 256px;
         height: 256px;
@@ -118,18 +135,13 @@ body > main > .Content > .PortfolioImage{
     }
 
     body > main > .Content{
-        width: 100%;
-        height: 100%;
         border-radius: 0;
     }
 }
 
 @media only screen and (max-width: 1825px) {
-    body > main > .Content > .PortfolioText{
-        width: 100%;
-        border-left: none;
-        font-size: 13pt;
-        padding: 0;
+    body > main > .Content{
+        margin-top: 5%;
     }
 }
 
@@ -146,7 +158,7 @@ body > main > .Content > .PortfolioText > .ThankYou > object{
 
 body > footer{
     width: 100%;
-    height: 5%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -154,6 +166,7 @@ body > footer{
     border-top: 1px solid #303030;
     margin-top: 5%;
     background-color: #282828;
+    grid-area: footer;
 }
 
 body > footer > .Copyright{
